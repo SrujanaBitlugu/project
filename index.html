@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <div class="auth-shell">
+    <div class="auth-hero">
+      <div class="brand-mark">🛍️ ShopEase</div>
+      <div class="hero-badge">Fresh deals every day</div>
+      <h1>Welcome to your next shopping experience.</h1>
+      <p>Sign in to discover fashion, beauty, electronics, home essentials, and more.</p>
+
+      <div class="hero-card">
+        <div class="hero-stat"><span>Secure access</span><strong>✔</strong></div>
+        <div class="hero-stat"><span>Personalized cart</span><strong>✔</strong></div>
+        <div class="hero-stat"><span>Fast checkout</span><strong>✔</strong></div>
+      </div>
+    </div>
+
+    <div class="auth-container">
+      <div class="auth-header">
+        <div class="auth-icon">🔐</div>
+        <h2>Sign in</h2>
+        <p>Welcome back! Please enter your details.</p>
+      </div>
+
+      <label class="input-group">
+        <span>Username</span>
+        <input type="text" id="username" placeholder="Enter username">
+      </label>
+
+      <label class="input-group">
+        <span>Password</span>
+        <input type="password" id="password" placeholder="Enter password">
+      </label>
+
+      <button class="primary-btn" onclick="login()">Login</button>
+
+      <div class="divider"><span>or</span></div>
+
+      <div class="auth-header small">
+        <h3>Create account</h3>
+        <p>New here? Register in seconds.</p>
+      </div>
+
+      <label class="input-group">
+        <span>New username</span>
+        <input type="text" id="regUser" placeholder="Choose a username">
+      </label>
+
+      <label class="input-group">
+        <span>New password</span>
+        <input type="password" id="regPass" placeholder="Choose a password">
+      </label>
+
+      <button class="secondary-btn" onclick="register()">Register</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopNest | Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand">ShopNest</div>
+      <div class="search-box">Search for skincare, fashion, appliances and more</div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <section class="hero-banner">
+      <div>
+        <p class="eyebrow">Welcome back</p>
+        <h1>Shop smarter with a modern cart experience.</h1>
+        <p>After login, explore categories such as beauty, fashion, electronics, furniture, jewellery, watches, and everyday essentials.</p>
+      </div>
+      <div class="hero-card">
+        <h3>Free delivery over $50</h3>
+        <p>Fast checkout, easy returns, and hand-picked products.</p>
+      </div>
+    </section>
+
+    <div class="content-layout">
+      <aside class="sidebar">
+        <h2>Browse Categories</h2>
+        <button class="category-btn active" data-category="all">All Products</button>
+        <button class="category-btn" data-category="skin">Skin Care</button>
+        <button class="category-btn" data-category="hair">Hair Care</button>
+        <button class="category-btn" data-category="beauty">Beauty</button>
+        <button class="category-btn" data-category="fashion">Fashion</button>
+        <button class="category-btn" data-category="electronics">Electronics</button>
+        <button class="category-btn" data-category="furniture">Furniture</button>
+        <button class="category-btn" data-category="jewellery">Jewellery</button>
+        <button class="category-btn" data-category="watches">Watches</button>
+        <button class="category-btn" data-category="appliances">Daily Appliances</button>
+        <button class="category-btn" data-category="stationery">Stationery</button>
+        <button class="category-btn" data-category="womens">Women’s Wear</button>
+        <button class="category-btn" data-category="mens">Men’s Wear</button>
+        <button class="category-btn" data-category="kids">Kids Wear</button>
+        <button class="category-btn" data-category="home">Home Essentials</button>
+      </aside>
+
+      <main class="main-area">
+        <section class="section-card">
+          <div class="section-heading">
+            <h2>Top Categories</h2>
+            <p>Explore your favorites by category</p>
+          </div>
+          <div class="mini-category-grid">
+            <div class="mini-card"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80" alt="Skin Care"><span>Skin Care</span></div>
+            <div class="mini-card"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80" alt="Hair Care"><span>Hair Care</span></div>
+            <div class="mini-card"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=500&q=80" alt="Appliances"><span>Appliances</span></div>
+            <div class="mini-card"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" alt="Stationery"><span>Stationery</span></div>
+            <div class="mini-card"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80" alt="Women’s Wear"><span>Women’s Wear</span></div>
+            <div class="mini-card"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=500&q=80" alt="Kids Wear"><span>Kids Wear</span></div>
+            <div class="mini-card"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=500&q=80" alt="Fashion"><span>Fashion</span></div>
+            <div class="mini-card"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" alt="Beauty"><span>Beauty</span></div>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <div class="section-heading">
+            <h2 id="categoryTitle">Popular Picks</h2>
+            <p>Fresh arrivals and best sellers for your cart</p>
+          </div>
+
+          <div class="products-grid">
+            <div class="product-card" data-category="skin">
+              <div class="product-image skin" style="background-image: url('https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Glow Serum</h3>
+              <p>Hydrating formula for a healthy glow.</p>
+              <span class="price">$24</span>
+              <button class="add-btn" data-name="Glow Serum" data-price="24">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="skin">
+              <div class="product-image skin" style="background-image: url('https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Day Cream</h3>
+              <p>Lightweight moisturizer for everyday comfort.</p>
+              <span class="price">$19</span>
+              <button class="add-btn" data-name="Day Cream" data-price="19">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="skin">
+              <div class="product-image skin" style="background-image: url('https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Face Mask</h3>
+              <p>Refreshes and soothes tired skin instantly.</p>
+              <span class="price">$14</span>
+              <button class="add-btn" data-name="Face Mask" data-price="14">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="hair">
+              <div class="product-image hair" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Silk Hair Oil</h3>
+              <p>Softens and nourishes every strand.</p>
+              <span class="price">$18</span>
+              <button class="add-btn" data-name="Silk Hair Oil" data-price="18">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="hair">
+              <div class="product-image hair" style="background-image: url('https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Repair Shampoo</h3>
+              <p>Deep cleansing for healthy, shiny hair.</p>
+              <span class="price">$15</span>
+              <button class="add-btn" data-name="Repair Shampoo" data-price="15">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="hair">
+              <div class="product-image hair" style="background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Hair Brush Set</h3>
+              <p>Gentle styling tools for everyday use.</p>
+              <span class="price">$12</span>
+              <button class="add-btn" data-name="Hair Brush Set" data-price="12">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="appliances">
+              <div class="product-image appliances" style="background-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Steam Iron</h3>
+              <p>Fast heating for crisp daily wear.</p>
+              <span class="price">$34</span>
+              <button class="add-btn" data-name="Steam Iron" data-price="34">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="appliances">
+              <div class="product-image appliances" style="background-image: url('https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Mini Blender</h3>
+              <p>Perfect for smoothies and quick meals.</p>
+              <span class="price">$28</span>
+              <button class="add-btn" data-name="Mini Blender" data-price="28">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="appliances">
+              <div class="product-image appliances" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Electric Kettle</h3>
+              <p>Fast boiling for tea, coffee, and soups.</p>
+              <span class="price">$23</span>
+              <button class="add-btn" data-name="Electric Kettle" data-price="23">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="stationery">
+              <div class="product-image stationery" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Study Set</h3>
+              <p>Notebook, pens, and planner bundle.</p>
+              <span class="price">$16</span>
+              <button class="add-btn" data-name="Study Set" data-price="16">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="stationery">
+              <div class="product-image stationery" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Desk Organizer</h3>
+              <p>Keep your workspace neat and stylish.</p>
+              <span class="price">$13</span>
+              <button class="add-btn" data-name="Desk Organizer" data-price="13">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="stationery">
+              <div class="product-image stationery" style="background-image: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Premium Pens</h3>
+              <p>Smooth writing pens for school or work.</p>
+              <span class="price">$10</span>
+              <button class="add-btn" data-name="Premium Pens" data-price="10">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="womens">
+              <div class="product-image womens" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Floral Dress</h3>
+              <p>Elegant and comfortable for daily wear.</p>
+              <span class="price">$42</span>
+              <button class="add-btn" data-name="Floral Dress" data-price="42">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="womens">
+              <div class="product-image womens" style="background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Casual Blouse</h3>
+              <p>Soft fabric with stylish everyday appeal.</p>
+              <span class="price">$26</span>
+              <button class="add-btn" data-name="Casual Blouse" data-price="26">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="womens">
+              <div class="product-image womens" style="background-image: url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Denim Jacket</h3>
+              <p>Trending layer for all-season outfits.</p>
+              <span class="price">$38</span>
+              <button class="add-btn" data-name="Denim Jacket" data-price="38">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="mens">
+              <div class="product-image mens" style="background-image: url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Classic Shirt</h3>
+              <p>Smart style with a relaxed fit.</p>
+              <span class="price">$29</span>
+              <button class="add-btn" data-name="Classic Shirt" data-price="29">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="mens">
+              <div class="product-image mens" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Formal Trousers</h3>
+              <p>Sharp and polished for work or events.</p>
+              <span class="price">$35</span>
+              <button class="add-btn" data-name="Formal Trousers" data-price="35">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="mens">
+              <div class="product-image mens" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Casual Hoodie</h3>
+              <p>Comfortable layer for everyday outings.</p>
+              <span class="price">$31</span>
+              <button class="add-btn" data-name="Casual Hoodie" data-price="31">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="kids">
+              <div class="product-image kids" style="background-image: url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Play Set</h3>
+              <p>Fun and comfortable for active kids.</p>
+              <span class="price">$22</span>
+              <button class="add-btn" data-name="Play Set" data-price="22">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="kids">
+              <div class="product-image kids" style="background-image: url('https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Kids Jacket</h3>
+              <p>Warm and cheerful for cooler days.</p>
+              <span class="price">$20</span>
+              <button class="add-btn" data-name="Kids Jacket" data-price="20">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="kids">
+              <div class="product-image kids" style="background-image: url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>School Backpack</h3>
+              <p>Spacious and durable for daily adventures.</p>
+              <span class="price">$25</span>
+              <button class="add-btn" data-name="School Backpack" data-price="25">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="home">
+              <div class="product-image home" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Cozy Throw</h3>
+              <p>Soft comfort for your living space.</p>
+              <span class="price">$27</span>
+              <button class="add-btn" data-name="Cozy Throw" data-price="27">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="home">
+              <div class="product-image home" style="background-image: url('https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Decor Cushion</h3>
+              <p>Brighten up your sofa with style.</p>
+              <span class="price">$17</span>
+              <button class="add-btn" data-name="Decor Cushion" data-price="17">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="home">
+              <div class="product-image home" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Dining Set</h3>
+              <p>Modern pieces for your everyday meals.</p>
+              <span class="price">$45</span>
+              <button class="add-btn" data-name="Dining Set" data-price="45">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="beauty">
+              <div class="product-image skin" style="background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Luxury Lipstick</h3>
+              <p>Long-lasting color with smooth finish.</p>
+              <span class="price">$22</span>
+              <button class="add-btn" data-name="Luxury Lipstick" data-price="22">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="beauty">
+              <div class="product-image skin" style="background-image: url('https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Glow Compact</h3>
+              <p>Soft coverage for a fresh finish.</p>
+              <span class="price">$17</span>
+              <button class="add-btn" data-name="Glow Compact" data-price="17">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="fashion">
+              <div class="product-image womens" style="background-image: url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Elegant Handbag</h3>
+              <p>Chic accessory for daily and evening looks.</p>
+              <span class="price">$48</span>
+              <button class="add-btn" data-name="Elegant Handbag" data-price="48">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="fashion">
+              <div class="product-image mens" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Smart Blazer</h3>
+              <p>Polished look for meetings and events.</p>
+              <span class="price">$56</span>
+              <button class="add-btn" data-name="Smart Blazer" data-price="56">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="electronics">
+              <div class="product-image electronics" style="background-image: url('https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Smart Speaker</h3>
+              <p>Portable sound with voice controls.</p>
+              <span class="price">$59</span>
+              <button class="add-btn" data-name="Smart Speaker" data-price="59">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="electronics">
+              <div class="product-image electronics" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Wireless Earbuds</h3>
+              <p>Compact audio with crystal-clear listening.</p>
+              <span class="price">$49</span>
+              <button class="add-btn" data-name="Wireless Earbuds" data-price="49">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="electronics">
+              <div class="product-image electronics" style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Smartphone Stand</h3>
+              <p>Convenient and compact for desk use.</p>
+              <span class="price">$21</span>
+              <button class="add-btn" data-name="Smartphone Stand" data-price="21">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="furniture">
+              <div class="product-image home" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Modern Chair</h3>
+              <p>Comfortable seating with a stylish finish.</p>
+              <span class="price">$89</span>
+              <button class="add-btn" data-name="Modern Chair" data-price="89">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="furniture">
+              <div class="product-image home" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Wooden Table</h3>
+              <p>Elegant centerpiece for dining or study.</p>
+              <span class="price">$120</span>
+              <button class="add-btn" data-name="Wooden Table" data-price="120">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="jewellery">
+              <div class="product-image womens" style="background-image: url('https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Diamond Pendant</h3>
+              <p>Elegant jewelry for special occasions.</p>
+              <span class="price">$74</span>
+              <button class="add-btn" data-name="Diamond Pendant" data-price="74">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="jewellery">
+              <div class="product-image womens" style="background-image: url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Gold Bracelet</h3>
+              <p>Simple and classy everyday accessory.</p>
+              <span class="price">$58</span>
+              <button class="add-btn" data-name="Gold Bracelet" data-price="58">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="watches">
+              <div class="product-image mens" style="background-image: url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Classic Watch</h3>
+              <p>Premium design with timeless appeal.</p>
+              <span class="price">$95</span>
+              <button class="add-btn" data-name="Classic Watch" data-price="95">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-category="watches">
+              <div class="product-image womens" style="background-image: url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80');"></div>
+              <h3>Smart Wrist Watch</h3>
+              <p>Track fitness and stay connected effortlessly.</p>
+              <span class="price">$105</span>
+              <button class="add-btn" data-name="Smart Wrist Watch" data-price="105">Add to Cart</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <aside class="cart-card">
+      <h2>Your Cart</h2>
+      <p>Items added here are ready for checkout.</p>
+      <ul id="cartItems"></ul>
+      <h3>Total: $<span id="total">0</span></h3>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
